@@ -10,7 +10,7 @@ idna==2.8
 itsdangerous==1.1.0
 Jinja2==2.10
 MarkupSafe==1.1.0
-menuinst==1.4.14
+menuinst==1.4.10
 mkl-fft==1.0.6
 mkl-random==1.0.2
 numpy==1.15.4
