@@ -62,11 +62,11 @@ def index():
 	return html
 
 
-#@app.route('/a', methods=['POST'])
-#def sound():
-#	name='./sounds/'+str(time.time())+'.wav'
-#	request.files['file'].save(name)
-#	return infer(name)
+@app.route('/a', methods=['POST'])
+def sound():
+	name='./sounds/'+str(time.time())+'.wav'
+	request.files['file'].save(name)
+	return infer(name)
 
 ## おまじない
 if __name__ == "__main__":
