@@ -40,8 +40,10 @@ def infer(file):
 	test=np.array(test, dtype='float32')
 	
 	net=Net()
+	### 変更箇所始
 	device=torch.device('cpu')
 	net.load_state_dict(torch.load('./model', map_location=device))
+	### 変更箇所終
 	net.eval()
 	
 	infer_data=net(torch.from_numpy(test))
@@ -69,7 +71,7 @@ def sound():
 	request.files['file'].save(name)
 	return infer(name)
 
-## おまじない
+### 追加箇所
 if __name__ == "__main__":
     app.run(debug=True)
 
